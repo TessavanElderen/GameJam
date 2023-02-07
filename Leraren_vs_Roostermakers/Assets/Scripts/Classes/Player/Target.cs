@@ -12,7 +12,7 @@ public class Target : MonoBehaviour
 
     private void Update()
     {
-        textHealth.text = "Health" + health;
+        textHealth.text = "Health " + health;
     }
 
     public void TakeDamage(int amount)
@@ -27,6 +27,6 @@ public class Target : MonoBehaviour
 
     private void Die()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 0);
+        SceneManager.LoadScene(sceneBuildIndex: 3);
     }
 }
