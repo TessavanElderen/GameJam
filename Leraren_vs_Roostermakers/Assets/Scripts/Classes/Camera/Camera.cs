@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,11 @@ public class Camera : MonoBehaviour
     float xRot;
     float yRot;
     internal static Camera main;
+
+    internal Ray ScreenPointToRay(Vector3 mousePosition)
+    {
+        throw new NotImplementedException();
+    }
 
     private void Start()
     {
