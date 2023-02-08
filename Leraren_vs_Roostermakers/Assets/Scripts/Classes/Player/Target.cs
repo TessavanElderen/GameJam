@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class Target : MonoBehaviour
 {
-    public int health = 5;
+    public int health = 10;
 
     public TMP_Text textHealth;
 

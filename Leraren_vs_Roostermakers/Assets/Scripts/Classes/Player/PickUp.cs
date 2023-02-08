@@ -10,8 +10,12 @@ public class PickUp : MonoBehaviour
     [SerializeField] private Camera mainPlayerCamera;
     [SerializeField] private float pickupRange;
 
+    [Header("Hurt")]
+    [SerializeField] private Target target;
+    [SerializeField] private int hurtAmount;
+
     [Header("Texts")]
-    public int addscore; 
+    public int addscore;
 
     private void Update()
     {
@@ -28,27 +32,24 @@ public class PickUp : MonoBehaviour
 
             if (Physics.Raycast(ray, out hitInfo, pickupRange, pickupMask))
             {
-                if (hitInfo.collider.gameObject.CompareTag("Rooster"))
+                if (hitInfo.collider.gameObject)
                 {
-                    for (int i = 0; i < pickupObject.Count;)
-                    {
-                        if (pickupObject.Count == 0)
-                        {
-                            Destroy(pickupObject[i].gameObject);
-                            pickupObject.Remove(pickupObject[i]);
-                            break;
-                        }
-                        else
-                        {
-                            print("I am hurt :( "); 
-                        }
-                    }
-
-                    AddScore(); 
+                    Destroy(hitInfo.collider.gameObject);
+                    pickupObject.Remove(hitInfo.collider.gameObject);
+                    AddScore();
                 }
             }
         }
     }
+
+    private void loseHealth()
+    {
+        if (pickupObject.Count != 0)
+        {
+            target.TakeDamage(hurtAmount);
+        }
+    }
+
 
     // increase score
     public void AddScore()
