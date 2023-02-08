@@ -13,6 +13,7 @@ public class Camera : MonoBehaviour
     float xRot;
     float yRot;
     internal static Camera main;
+    internal int depth;
 
     internal Ray ScreenPointToRay(Vector3 mousePosition)
     {
