@@ -17,6 +17,7 @@ public class PickUp : MonoBehaviour
     [Header("Texts")]
     public int addscore;
 
+
     private void Update()
     {
         PickingUp();
@@ -32,6 +33,7 @@ public class PickUp : MonoBehaviour
 
             if (Physics.Raycast(ray, out hitInfo, pickupRange, pickupMask))
             {
+                //true
                 if (hitInfo.collider.gameObject)
                 {
                     Destroy(hitInfo.collider.gameObject);
@@ -42,27 +44,16 @@ public class PickUp : MonoBehaviour
         }
     }
 
-    private void loseHealth()
-    {
-        if (pickupObject.Count != 0)
-        {
-            target.TakeDamage(hurtAmount);
-        }
-    }
-
-
     // increase score
     public void AddScore()
     {
         addscore++;
         IncreasePoints.instance.UpdateScore(addscore);
-        print(addscore);
 
         if (addscore == 5)
         {
             // Go to Win screen
             SceneManager.LoadScene(sceneBuildIndex: 4);
-            print("You win");
         }
     }
 }

@@ -12,11 +12,11 @@ public class IncreasePoints : MonoBehaviour
     private void Start()
     {
         instance = this; 
-        score.text = "" + 0 ; 
+        score.text = "" + 0 + "/5"; 
     }
 
     public void UpdateScore(int amount)
     {
-        score.text = "" + amount.ToString();
+        score.text = "" + amount.ToString() + "/5";
     }
 }
