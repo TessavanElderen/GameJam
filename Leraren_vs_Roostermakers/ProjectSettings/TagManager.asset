@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Rooster
+  - GameMusic
   layers:
   - Default
   - TransparentFX

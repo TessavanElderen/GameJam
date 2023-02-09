@@ -471,10 +471,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Hallo roostermaker. Je bent net op tijd. Jij moet het rooster maken voor
-    de komende week. \n\nDoor de lokalen en gang liggen de stukken van het rooster.
-    Jij moet ze in de juiste volgorde zoeken.\n  \nHet rooster is door de docenten
-    en leerlingen overhoop gehaald.\n\nKijk uit voor de docenten. Die proberen jou
-    te stoppen."
+    de komende week. \n\nDoor de lokalen liggen de stukken van het rooster. Jij moet
+    ze zoeken.\n\nHet rooster is door de docenten en leerlingen overhoop gehaald.\n\nKijk
+    uit voor de docenten. Die proberen jou te stoppen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
